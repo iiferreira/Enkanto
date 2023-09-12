@@ -11,6 +11,26 @@ struct MainView: View {
     
     @EnvironmentObject var appState : AppStateManager
     
+    func correctViewForState() -> some View {
+        switch appState.selectedTab {
+        case .fire:
+            let view = Text("Fire")
+            return AnyView(view)
+        case .some(.star):
+            let view = Text("Star")
+            return AnyView(view)
+        case .some(.message):
+            let view = Text("Message")
+            return AnyView(view)
+        case .some(.profile):
+            let view = Text("Profile")
+            return AnyView(view)
+        case .none:
+            let view = Color(.systemGray6).opacity(0.35)
+            return AnyView(view)
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color(.systemGray6)
@@ -33,15 +53,19 @@ struct MainView: View {
                 
                 Spacer()
                 
+                correctViewForState()
+                
+                Spacer()
+                
             }
         }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
 
 
