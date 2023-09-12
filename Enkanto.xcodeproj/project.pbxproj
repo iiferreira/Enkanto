@@ -13,6 +13,8 @@
 		1F2F8E7E2AAF98F800AE2BA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F8E7D2AAF98F800AE2BA2 /* Preview Assets.xcassets */; };
 		1F2F8E852AAFA03600AE2BA2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F8E842AAFA03600AE2BA2 /* MainView.swift */; };
 		1F2F8E872AAFA23900AE2BA2 /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F8E862AAFA23900AE2BA2 /* TabBarButtonView.swift */; };
+		1F965DF12AB0A81D00383577 /* AppStageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF02AB0A81D00383577 /* AppStageManager.swift */; };
+		1F965DF32AB0AAB900383577 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF22AB0AAB900383577 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		1F2F8E7D2AAF98F800AE2BA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F2F8E842AAFA03600AE2BA2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1F2F8E862AAFA23900AE2BA2 /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
+		1F965DF02AB0A81D00383577 /* AppStageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStageManager.swift; sourceTree = "<group>"; };
+		1F965DF22AB0AAB900383577 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 				1F2F8E762AAF98F700AE2BA2 /* EnkantoApp.swift */,
 				1F2F8E782AAF98F700AE2BA2 /* ContentView.swift */,
 				1F2F8E842AAFA03600AE2BA2 /* MainView.swift */,
+				1F965DF02AB0A81D00383577 /* AppStageManager.swift */,
 				1F2F8E862AAFA23900AE2BA2 /* TabBarButtonView.swift */,
+				1F965DF22AB0AAB900383577 /* Extensions.swift */,
 				1F2F8E7A2AAF98F800AE2BA2 /* Assets.xcassets */,
 				1F2F8E7C2AAF98F800AE2BA2 /* Preview Content */,
 			);
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2F8E872AAFA23900AE2BA2 /* TabBarButtonView.swift in Sources */,
+				1F965DF32AB0AAB900383577 /* Extensions.swift in Sources */,
+				1F965DF12AB0A81D00383577 /* AppStageManager.swift in Sources */,
 				1F2F8E792AAF98F700AE2BA2 /* ContentView.swift in Sources */,
 				1F2F8E852AAFA03600AE2BA2 /* MainView.swift in Sources */,
 				1F2F8E772AAF98F700AE2BA2 /* EnkantoApp.swift in Sources */,
