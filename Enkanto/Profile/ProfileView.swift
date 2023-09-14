@@ -9,54 +9,85 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
-            ZStack(alignment: .topTrailing) {
-                RoundedImage(url: URL(string: "https://picsum.photos/400"))
-                    .frame(height: 200)
-                
-                Button {
-                    print("Edit")
-                } label: {
-                    Image(systemName: "pencil")
-                        .font(.system(size: 18,weight: .heavy))
-                        .foregroundColor(Color.gray.opacity(0.5))
-                        .frame(width: 32, height: 32)
-                        .background(.white)
-                        .clipShape(Circle())
-                        .shadow(radius: 6)
-                        .offset(x:-15)
-                }
-
-            }
-           
-            Text("Iuri Ferreira,39")
-                .foregroundColor(.textTitle)
-                .font(.system(size: 26,weight: .medium))
-            
-            Text("Software Engineer")
-                .padding(.all,5)
-            
-            HStack {
-                VStack {
-                    HStack(spacing:25) {
-                        ProfileButtonView(title: "SETTINGS", image: "gearshape.fill") {
-                            
-                        }
-                        
-                        ProfileButtonView(title: "CAMERA", image: "camera.fill") {
-                            
-                        }
-                        
-                        ProfileButtonView(title: "SAFETY", image: "shield.fill") {
-                            
-                        }
+        ZStack {
+            Color(.systemGray6).opacity(0.65)
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                ZStack(alignment: .topTrailing) {
+                    RoundedImage(url: URL(string: "https://picsum.photos/400"))
+                        .frame(height: 200)
+                    
+                    Button {
+                        print("Edit")
+                    } label: {
+                        Image(systemName: "pencil")
+                            .font(.system(size: 18,weight: .heavy))
+                            .foregroundColor(Color.gray.opacity(0.5))
+                            .frame(width: 32, height: 32)
+                            .background(.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 6)
+                            .offset(x:-15)
                     }
-                    .padding(.top,20)
+
                 }
+               
+                Text("Iuri Ferreira,39")
+                    .foregroundColor(.textTitle)
+                    .font(.system(size: 26,weight: .medium))
+                
+                Text("Software Engineer")
+                    .padding(.all,5)
+                
+                HStack {
+                    VStack {
+                        HStack(alignment:.top, spacing:25) {
+                            ProfileButtonView(title: "SETTINGS", image: "gearshape.fill") {
+                                
+                            }
+                            
+                            ProfileButtonView(title: "ADD MEDIA", image: "camera.fill", atEvidence: true) {
+                                
+                            }
+                            
+                            ProfileButtonView(title: "SAFETY", image: "shield.fill") {
+                                
+                            }
+                        }
+                        .padding(.top,20)
+                    }
+                }
+                
+                HStack {
+                    Text("Photo Tip: Make waves with a beach photo and get more likes.")
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(3)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                            .foregroundColor(.pink)
+                            .padding(6)
+                    }
+                    .background(.white)
+                    .clipShape(Circle())
+                }
+                .frame(height: 34, alignment: .center)
+                .padding()
+                .background(.pink)
+                .cornerRadius(12)
+                
+                ProfileSwipePromo()
+//                    .background(.gray.opacity(0.10))
+                    .cornerRadius(12)
+                    .padding()
+                    
+                
+                Spacer()
             }
-            
-            Spacer()
-            
         }
     }
 }
@@ -67,28 +98,4 @@ struct ProfileView_Previews: PreviewProvider {
     }
 }
 
-struct ProfileButtonView: View {
-    var title: String!
-    var image: String!
-    var action: ()->()
-    
-    var body: some View {
-        Button {
-            action()
-        } label: {
-            VStack {
-                Image(systemName: image)
-                    .foregroundColor(.textPrimary)
-                    .font(.system(size: 30))
-                    .padding(10)
-                    .background(Color.white)
-                    .clipShape(Circle())
-                    .shadow(radius: 6)
-                
-                Text(title)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(.textSecondary)
-            }
-        }
-    }
-}
+

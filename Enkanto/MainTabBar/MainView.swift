@@ -20,10 +20,10 @@ struct MainView: View {
             let view = Text("Star")
             return AnyView(view)
         case .some(.message):
-            let view = Text("Message")
+            let view = MessageView(message: Message.exampleSent)
             return AnyView(view)
         case .some(.profile):
-            let view = Text("Profile")
+            let view = ProfileView()
             return AnyView(view)
         case .none:
             let view = Color(.systemGray6).opacity(0.35)
