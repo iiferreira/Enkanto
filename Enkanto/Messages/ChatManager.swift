@@ -17,6 +17,10 @@ class ChatManager : ObservableObject {
         loadMessages()
     }
     
+    public func sendMessage(_ message: Message) {
+        messages.append(message)
+    }
+    
     private func loadMessages() {
         self.messages = [Message.exampleSent, Message.exampleReceived]
     }
