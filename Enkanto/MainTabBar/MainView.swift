@@ -20,7 +20,7 @@ struct MainView: View {
             let view = Text("Star")
             return AnyView(view)
         case .some(.message):
-            let view = MessageView(message: Message.exampleSent)
+            let view = MessageListView()
             return AnyView(view)
         case .some(.profile):
             let view = ProfileView()

@@ -13,6 +13,10 @@ struct ChatView: View {
     
     @State private var typingMessage : String = ""
     
+    @State private var scrollProxy : ScrollViewProxy? = nil
+    
+    @State private var textChange : Bool = false
+    
     private var person : Person
     
     init(person: Person) {
@@ -26,10 +30,16 @@ struct ChatView: View {
                 Spacer().frame(height: 60)
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    LazyVStack {
-                        ForEach(chatManager.messages.indices, id: \.self) { index in
-                            let msg = chatManager.messages[index]
-                            MessageView(message: msg)
+                    ScrollViewReader { proxy in
+                        LazyVStack {
+                            ForEach(chatManager.messages.indices, id: \.self) { index in
+                                let msg = chatManager.messages[index]
+                                MessageView(message: msg)
+                                    .id(index)
+                            }
+                        }
+                        .onAppear {
+                            scrollProxy = proxy
                         }
                     }
                 }
@@ -37,19 +47,21 @@ struct ChatView: View {
                 ZStack(alignment:.trailing) {
                     Color.textfieldBG
                         .frame(height: 45)
+                    
                     TextField("Type a message", text: $typingMessage)
                         .foregroundColor(Color.textPrimary)
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(height: 45)
                         .padding(.horizontal)
                     
-                    Button {
-                 
-                        sendMessage()
-                    } label: {
-                        Text("Send")
-                            .padding(.horizontal)
-                            .foregroundColor(typingMessage.isEmpty ? Color.textPrimary : Color.blue )
+                    if !typingMessage.isEmpty {
+                        Button {
+                            sendMessage()
+                        } label: {
+                            Text("Send")
+                                .padding(.horizontal)
+                                .foregroundColor(typingMessage.isEmpty ? Color.textPrimary : Color.blue )
+                        }
                     }
                 }
                 .cornerRadius(12)
@@ -67,9 +79,17 @@ struct ChatView: View {
             }
         }
         
-        .navigationTitle("")
-        .navigationBarHidden(true)
-//        .toolbar(.hidden, for: .navigationBar)
+        .modifier(HideNavigationView())
+        
+        .onChange(of: chatManager.keyboardIsShowing) { value in
+            if value {
+                scrollToBottom()
+            }
+        }
+        .onChange(of: chatManager.messages) { value in
+            scrollToBottom()
+        }
+        //        .toolbar(.hidden, for: .navigationBar)
     }
     
     //Helper functions
@@ -77,11 +97,18 @@ struct ChatView: View {
         chatManager.sendMessage(Message(content: typingMessage))
         print(typingMessage)
         typingMessage = ""
+        scrollToBottom()
+    }
+    
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(chatManager.messages.count - 1, anchor: .bottom)
+        }
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(person: Person.example)
+        ChatView(person: Person.example2)
     }
 }
