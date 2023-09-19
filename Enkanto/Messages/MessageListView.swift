@@ -37,46 +37,78 @@ struct MessageListView: View {
                         }
                         .animation(.easeIn(duration: 0.10))
                     
-                    
-                    if isEditing {
-                        Button {
-                            isEditing = false
-                            searchText = ""
-                            self.endEditing(true)
-                        } label: {
-                            Text("Cancel")
-                                .foregroundColor(.red)
-                            
-                        }
-                        .padding(.trailing,10)
-                        .transition(.move(edge: .trailing))
-                        .animation(.easeIn(duration: 0.10))
-                    }
+                    CancelButton(isEditing: $isEditing, searchText: $searchText)
                 }
                 
                 
-                VStack {
-                    ScrollView {
-                        ForEach(vm.messagePreview, id:\.self) { preview in
-                            NavigationLink {
-                                ChatView(person: preview.person)
-                            } label: {
-                                MessageRowView(preview: preview)
+                ZStack {
+                    VStack {
+                        ScrollView {
+                            ForEach(vm.messagePreview.filter({ preview in
+                                displayPreview(preview)
+                            }), id:\.self) { preview in
+                                NavigationLink {
+                                    ChatView(person: preview.person)
+                                } label: {
+                                    MessageRowView(preview: preview)
+                                        
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .animation(.easeIn, value: 0.25)
+                                .transition(.slide)
                             }
-                            .foregroundColor(Color.textTitle)
                         }
                     }
+                    searchText.isEmpty ? Color.white.opacity(0.0) : Color.white.opacity(0.5)
                 }
                 
                 Spacer()
             }
         }
     }
+    
+   
 }
 
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
             MessageListView()
         
+    }
+}
+
+struct CancelButton : View {
+    
+    @Binding var isEditing: Bool
+    @Binding var searchText: String
+    
+    var body: some View {
+        if isEditing {
+            Button {
+                isEditing = false
+                searchText = ""
+                self.endEditing(true)
+            } label: {
+                Text("Cancel")
+                    .foregroundColor(.red)
+                
+            }
+            .padding(.trailing,10)
+            .transition(.move(edge: .trailing))
+            .animation(.easeIn(duration: 0.10))
+        }
+    }
+}
+
+extension MessageListView {
+    func displayPreview(_ preview: MessagePreview) -> Bool {
+        
+        if searchText.isEmpty { return true }
+        
+        if preview.person.name.contains(searchText) { return true }
+        
+        if preview.lastMessage.contains(searchText) { return true }
+        
+        return false
     }
 }

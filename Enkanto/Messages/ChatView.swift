@@ -27,7 +27,7 @@ struct ChatView: View {
     var body: some View {
         ZStack(alignment:.top) {
             VStack {
-                Spacer().frame(height: 60)
+                Spacer().frame(height: 70)
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     ScrollViewReader { proxy in
@@ -77,8 +77,8 @@ struct ChatView: View {
             ChatViewHeader(name: person.name, imageURL: person.imageURLS.first) {
                 //Video action
             }
+            .padding(.top,10)
         }
-        
         .modifier(HideNavigationView())
         
         .onChange(of: chatManager.keyboardIsShowing) { value in
@@ -89,10 +89,19 @@ struct ChatView: View {
         .onChange(of: chatManager.messages) { value in
             scrollToBottom()
         }
-        //        .toolbar(.hidden, for: .navigationBar)
     }
-    
-    //Helper functions
+}
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView(person: Person.example2)
+    }
+}
+
+
+//MARK: - Helper functions
+
+extension ChatView {
     func sendMessage() {
         chatManager.sendMessage(Message(content: typingMessage))
         print(typingMessage)
@@ -104,11 +113,5 @@ struct ChatView: View {
         withAnimation {
             scrollProxy?.scrollTo(chatManager.messages.count - 1, anchor: .bottom)
         }
-    }
-}
-
-struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView(person: Person.example2)
     }
 }
