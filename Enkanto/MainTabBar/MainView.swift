@@ -17,7 +17,7 @@ struct MainView: View {
             let view = Text("Fire")
             return AnyView(view)
         case .some(.star):
-            let view = Text("Star")
+            let view = MatchesView()
             return AnyView(view)
         case .some(.message):
             let view = MessageListView()
