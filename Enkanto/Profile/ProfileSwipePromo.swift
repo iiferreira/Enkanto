@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileSwipePromo: View {
-    
+    var action : () -> ()
     var textSpacing : CGFloat = 8
     
     var body: some View {
@@ -47,7 +47,7 @@ struct ProfileSwipePromo: View {
             }
             .tabViewStyle(PageTabViewStyle())
             Button {
-
+                action()
             } label: {
                 Text("BUY ENKANTO+")
                     .frame(width: 260,height: 50)
@@ -65,7 +65,9 @@ struct ProfileSwipePromo_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color(.systemGray6).opacity(0.35)
-            ProfileSwipePromo()
+            ProfileSwipePromo {
+                
+            }
         }
     }
 }

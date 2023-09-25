@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userManager : UserManager
+    @EnvironmentObject var appState : AppStateManager
+    
+    var user : User {
+        return userManager.currentUser
+    }
+    
     var body: some View {
         ZStack {
             Color(.systemGray6).opacity(0.65)
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 ZStack(alignment: .topTrailing) {
-                    RoundedImage(url: URL(string: "https://picsum.photos/400"))
+                    RoundedImage(url: user.imageURL.first)
                         .frame(height: 200)
                     
                     Button {
@@ -29,14 +36,14 @@ struct ProfileView: View {
                             .shadow(radius: 6)
                             .offset(x:-15)
                     }
-
+                    
                 }
-               
-                Text("Iuri Ferreira,39")
+                
+                Text("\(user.name),\(user.age)")
                     .foregroundColor(.textTitle)
                     .font(.system(size: 26,weight: .medium))
                 
-                Text("Software Engineer")
+                Text("\(user.jobTitle)")
                     .padding(.all,5)
                 
                 HStack {
@@ -59,12 +66,12 @@ struct ProfileView: View {
                 }
                 
                 HStack {
-                    Text("Photo Tip: Make waves with a beach photo and get more likes.")
+                    Text("\(user.profileTip)")
                         .multilineTextAlignment(.leading)
                         .lineLimit(3)
                         .foregroundColor(.white)
                         .font(.system(size: 14))
-                        
+                    
                     Button {
                         
                     } label: {
@@ -80,12 +87,16 @@ struct ProfileView: View {
                 .background(.pink)
                 .cornerRadius(12)
                 
-                ProfileSwipePromo()
-//                    .background(.gray.opacity(0.10))
-                    .cornerRadius(12)
-                    .padding()
-                    
-                
+                if !user.goldSubscriber {
+                    ZStack {
+                        ProfileSwipePromo {
+                            appState.showPurchaseScreen()
+                        }
+                        .background(.gray.opacity(0.10))
+                        .cornerRadius(12)
+                        .padding()
+                    }
+                }
                 Spacer()
             }
         }
@@ -95,6 +106,8 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }
 
