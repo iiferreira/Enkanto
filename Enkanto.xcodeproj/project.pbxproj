@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1DD3A12AC1CA60004EBFA7 /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD3A02AC1CA60004EBFA7 /* PurchasePopup.swift */; };
 		1F2F8E772AAF98F700AE2BA2 /* EnkantoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F8E762AAF98F700AE2BA2 /* EnkantoApp.swift */; };
 		1F2F8E792AAF98F700AE2BA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F8E782AAF98F700AE2BA2 /* ContentView.swift */; };
 		1F2F8E7B2AAF98F800AE2BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F8E7A2AAF98F800AE2BA2 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1DD3A02AC1CA60004EBFA7 /* PurchasePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
 		1F2F8E732AAF98F700AE2BA2 /* Enkanto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enkanto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2F8E762AAF98F700AE2BA2 /* EnkantoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnkantoApp.swift; sourceTree = "<group>"; };
 		1F2F8E782AAF98F700AE2BA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1DD39F2AC1CA4F004EBFA7 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD3A02AC1CA60004EBFA7 /* PurchasePopup.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
 		1F2F8E6A2AAF98F700AE2BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		1F2F8E752AAF98F700AE2BA2 /* Enkanto */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DD39F2AC1CA4F004EBFA7 /* Popups */,
 				1F41F6E12ABB1C1600BA6C7C /* MatchesView */,
 				1FAF7D7D2AB334FA00AE6990 /* Model */,
 				1F3353FA2AB1E16100DE758C /* HelperView */,
@@ -277,6 +288,7 @@
 				1FAF7D8B2AB33D7700AE6990 /* ChatViewHeader.swift in Sources */,
 				1F41F6DE2ABB16EF00BA6C7C /* UserManager.swift in Sources */,
 				1F41F6E02ABB176500BA6C7C /* User.swift in Sources */,
+				1F1DD3A12AC1CA60004EBFA7 /* PurchasePopup.swift in Sources */,
 				1FAF7D832AB336BD00AE6990 /* MessagePreview.swift in Sources */,
 				1FAF7D892AB33B7B00AE6990 /* ChatManager.swift in Sources */,
 				1F41F6E52ABB255C00BA6C7C /* PersonSquare.swift in Sources */,
