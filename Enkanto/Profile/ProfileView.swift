@@ -76,7 +76,7 @@ struct ProfileView: View {
                         
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(.pink)
+                            .foregroundColor(.black)
                             .padding(6)
                     }
                     .background(.white)
@@ -84,7 +84,7 @@ struct ProfileView: View {
                 }
                 .frame(height: 34, alignment: .center)
                 .padding()
-                .background(.pink)
+                .background(.indigo)
                 .cornerRadius(12)
                 
                 if !user.goldSubscriber {
