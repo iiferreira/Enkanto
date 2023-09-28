@@ -36,6 +36,7 @@
 		1FAF7D872AB33B3000AE6990 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D862AB33B3000AE6990 /* ChatView.swift */; };
 		1FAF7D892AB33B7B00AE6990 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */; };
 		1FAF7D8B2AB33D7700AE6990 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */; };
+		1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */; };
 		1FEAA14E2AB9CD12006E1489 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAA14D2AB9CD12006E1489 /* MessageRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		1FAF7D862AB33B3000AE6990 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesSwipePromo.swift; sourceTree = "<group>"; };
 		1FEAA14D2AB9CD12006E1489 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1F1DD3A02AC1CA60004EBFA7 /* PurchasePopup.swift */,
+				1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				1FEAA14E2AB9CD12006E1489 /* MessageRowView.swift in Sources */,
 				1F41F6E72ABB5EF600BA6C7C /* TopPicksView.swift in Sources */,
 				1F41F6E32ABB1C2C00BA6C7C /* LikesView.swift in Sources */,
+				1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */,
 				1FAF7D872AB33B3000AE6990 /* ChatView.swift in Sources */,
 				1FAF7D812AB335F100AE6990 /* Person.swift in Sources */,
 				1FAF7D7F2AB3351900AE6990 /* Message.swift in Sources */,
