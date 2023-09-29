@@ -37,6 +37,8 @@
 		1FAF7D892AB33B7B00AE6990 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */; };
 		1FAF7D8B2AB33D7700AE6990 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */; };
 		1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */; };
+		1FD858FF2AC6201600849FDA /* PurchasesOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD858FE2AC6201600849FDA /* PurchasesOptionsView.swift */; };
+		1FD859012AC6217A00849FDA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD859002AC6217A00849FDA /* Subscription.swift */; };
 		1FEAA14E2AB9CD12006E1489 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAA14D2AB9CD12006E1489 /* MessageRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
 		1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesSwipePromo.swift; sourceTree = "<group>"; };
+		1FD858FE2AC6201600849FDA /* PurchasesOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesOptionsView.swift; sourceTree = "<group>"; };
+		1FD859002AC6217A00849FDA /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		1FEAA14D2AB9CD12006E1489 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				1F1DD3A02AC1CA60004EBFA7 /* PurchasePopup.swift */,
+				1FD858FE2AC6201600849FDA /* PurchasesOptionsView.swift */,
+				1FD859002AC6217A00849FDA /* Subscription.swift */,
 				1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */,
 			);
 			path = Popups;
@@ -301,7 +307,9 @@
 				1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */,
 				1FAF7D872AB33B3000AE6990 /* ChatView.swift in Sources */,
 				1FAF7D812AB335F100AE6990 /* Person.swift in Sources */,
+				1FD858FF2AC6201600849FDA /* PurchasesOptionsView.swift in Sources */,
 				1FAF7D7F2AB3351900AE6990 /* Message.swift in Sources */,
+				1FD859012AC6217A00849FDA /* Subscription.swift in Sources */,
 				1F3353FE2AB1FDD200DE758C /* ProfileSwipePromo.swift in Sources */,
 				1F3353F42AB1DCB100DE758C /* ProfileView.swift in Sources */,
 				1F3353FC2AB1EDA100DE758C /* ProfileButtonView.swift in Sources */,

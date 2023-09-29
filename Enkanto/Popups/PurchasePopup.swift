@@ -25,6 +25,7 @@ struct PurchasePopup: View {
                     
                     PurchasesSwipePromo()
                         .frame(height: geo.size.height / 3 )
+                        .padding(.top, -35)
                         
                     
                     Text("3 Purchase Options")
