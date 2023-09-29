@@ -36,6 +36,7 @@
 		1FAF7D872AB33B3000AE6990 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D862AB33B3000AE6990 /* ChatView.swift */; };
 		1FAF7D892AB33B7B00AE6990 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */; };
 		1FAF7D8B2AB33D7700AE6990 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */; };
+		1FD1CAD82AC76B86004480A2 /* RoundedCorner+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1CAD72AC76B86004480A2 /* RoundedCorner+Ext.swift */; };
 		1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */; };
 		1FD858FF2AC6201600849FDA /* PurchasesOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD858FE2AC6201600849FDA /* PurchasesOptionsView.swift */; };
 		1FD859012AC6217A00849FDA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD859002AC6217A00849FDA /* Subscription.swift */; };
@@ -72,6 +73,7 @@
 		1FAF7D862AB33B3000AE6990 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1FAF7D882AB33B7B00AE6990 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		1FAF7D8A2AB33D7700AE6990 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		1FD1CAD72AC76B86004480A2 /* RoundedCorner+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedCorner+Ext.swift"; sourceTree = "<group>"; };
 		1FD858FC2AC619FD00849FDA /* PurchasesSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesSwipePromo.swift; sourceTree = "<group>"; };
 		1FD858FE2AC6201600849FDA /* PurchasesOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesOptionsView.swift; sourceTree = "<group>"; };
 		1FD859002AC6217A00849FDA /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		1F2F8E752AAF98F700AE2BA2 /* Enkanto */ = {
 			isa = PBXGroup;
 			children = (
+				1FD1CAD62AC76B73004480A2 /* Extensions */,
 				1F1DD39F2AC1CA4F004EBFA7 /* Popups */,
 				1F41F6E12ABB1C1600BA6C7C /* MatchesView */,
 				1FAF7D7D2AB334FA00AE6990 /* Model */,
@@ -130,7 +133,6 @@
 				1F2F8E782AAF98F700AE2BA2 /* ContentView.swift */,
 				1F2F8E762AAF98F700AE2BA2 /* EnkantoApp.swift */,
 				1F965DF02AB0A81D00383577 /* AppStageManager.swift */,
-				1F965DF22AB0AAB900383577 /* Extensions.swift */,
 				1F2F8E7A2AAF98F800AE2BA2 /* Assets.xcassets */,
 				1F2F8E7C2AAF98F800AE2BA2 /* Preview Content */,
 			);
@@ -207,6 +209,15 @@
 				1F41F6DF2ABB176500BA6C7C /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1FD1CAD62AC76B73004480A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F965DF22AB0AAB900383577 /* Extensions.swift */,
+				1FD1CAD72AC76B86004480A2 /* RoundedCorner+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				1F965DF12AB0A81D00383577 /* AppStageManager.swift in Sources */,
 				1FAF50422AB8C5C9007E68CE /* MessageListView.swift in Sources */,
 				1F2F8E792AAF98F700AE2BA2 /* ContentView.swift in Sources */,
+				1FD1CAD82AC76B86004480A2 /* RoundedCorner+Ext.swift in Sources */,
 				1F2F8E852AAFA03600AE2BA2 /* MainView.swift in Sources */,
 				1FAF7D8B2AB33D7700AE6990 /* ChatViewHeader.swift in Sources */,
 				1F41F6DE2ABB16EF00BA6C7C /* UserManager.swift in Sources */,

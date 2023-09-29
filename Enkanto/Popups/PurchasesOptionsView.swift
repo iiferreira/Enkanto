@@ -60,6 +60,7 @@ struct PurchasesOptionsView: View {
                     Rectangle()
                         .foregroundColor(.yellow)
                         .frame(height: 20)
+                        .cornerRadius(10, corners: [.topLeft,.topRight])
                     
                     Text(subscription.tagLine.rawValue)
                         .font(.system(size: 12))
