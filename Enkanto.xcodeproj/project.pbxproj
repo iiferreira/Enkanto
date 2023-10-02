@@ -25,6 +25,7 @@
 		1F41F6E52ABB255C00BA6C7C /* PersonSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F6E42ABB255C00BA6C7C /* PersonSquare.swift */; };
 		1F41F6E72ABB5EF600BA6C7C /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F6E62ABB5EF600BA6C7C /* TopPicksView.swift */; };
 		1F41F6E92ABB61D400BA6C7C /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F6E82ABB61D400BA6C7C /* MatchesView.swift */; };
+		1F6204562ACA53EF00C9F3CD /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */; };
 		1F965DF12AB0A81D00383577 /* AppStageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF02AB0A81D00383577 /* AppStageManager.swift */; };
 		1F965DF32AB0AAB900383577 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF22AB0AAB900383577 /* Extensions.swift */; };
 		1FAF50422AB8C5C9007E68CE /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF50412AB8C5C9007E68CE /* MessageListView.swift */; };
@@ -62,6 +63,7 @@
 		1F41F6E42ABB255C00BA6C7C /* PersonSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSquare.swift; sourceTree = "<group>"; };
 		1F41F6E62ABB5EF600BA6C7C /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		1F41F6E82ABB61D400BA6C7C /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
 		1F965DF02AB0A81D00383577 /* AppStageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStageManager.swift; sourceTree = "<group>"; };
 		1F965DF22AB0AAB900383577 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1FAF50412AB8C5C9007E68CE /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		1F2F8E752AAF98F700AE2BA2 /* Enkanto */ = {
 			isa = PBXGroup;
 			children = (
+				1F6204572ACA543700C9F3CD /* CardViews */,
 				1FD1CAD62AC76B73004480A2 /* Extensions */,
 				1F1DD39F2AC1CA4F004EBFA7 /* Popups */,
 				1F41F6E12ABB1C1600BA6C7C /* MatchesView */,
@@ -183,6 +186,14 @@
 				1F41F6E82ABB61D400BA6C7C /* MatchesView.swift */,
 			);
 			path = MatchesView;
+			sourceTree = "<group>";
+		};
+		1F6204572ACA543700C9F3CD /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */,
+			);
+			path = CardViews;
 			sourceTree = "<group>";
 		};
 		1FAF7D7C2AB334B400AE6990 /* Messages */ = {
@@ -317,6 +328,7 @@
 				1F41F6E72ABB5EF600BA6C7C /* TopPicksView.swift in Sources */,
 				1F41F6E32ABB1C2C00BA6C7C /* LikesView.swift in Sources */,
 				1FD858FD2AC619FD00849FDA /* PurchasesSwipePromo.swift in Sources */,
+				1F6204562ACA53EF00C9F3CD /* CardImageScroller.swift in Sources */,
 				1FAF7D872AB33B3000AE6990 /* ChatView.swift in Sources */,
 				1FAF7D812AB335F100AE6990 /* Person.swift in Sources */,
 				1FD858FF2AC6201600849FDA /* PurchasesOptionsView.swift in Sources */,

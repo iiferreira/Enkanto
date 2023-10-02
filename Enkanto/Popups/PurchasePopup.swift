@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PurchasePopup: View {
     
+    @EnvironmentObject var appState : AppStateManager
+    
     var screen = UIScreen.main.bounds
     
     @State private var selectedIndex : Int = 1
@@ -18,6 +20,13 @@ struct PurchasePopup: View {
         Subscription.example2,
         Subscription.example3
     ]
+    
+    func processPayment() {
+        print("Pmba")
+        print(selectedIndex)
+    }
+    
+    @Binding var isVisible : Bool
     
     var body: some View {
         GeometryReader { geo in
@@ -63,7 +72,7 @@ struct PurchasePopup: View {
                     .padding()
                     
                     Button {
-                        
+                        appState.showPurchasePopup.toggle()
                     } label: {
                         ZStack {
                             Text("NO THANKS")
@@ -106,16 +115,11 @@ struct PurchasePopup: View {
 
 struct PurchasePopup_Previews: PreviewProvider {
     static var previews: some View {
-        PurchasePopup()
+        PurchasePopup(isVisible: .constant(false))
+            .environmentObject(AppStateManager())
     }
 }
 
 
 //MARK: - Helper functions
 
-extension PurchasePopup {
-    
-    func processPayment() {
-        print("Pimba")
-    }
-}

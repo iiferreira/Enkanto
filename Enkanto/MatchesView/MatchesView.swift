@@ -76,7 +76,7 @@ struct MatchesView: View {
             }
             
             Button {
-                
+                appState.showPurchasePopup.toggle()
             } label: {
                 Text(buttonText)
                     .padding(.vertical,14)
