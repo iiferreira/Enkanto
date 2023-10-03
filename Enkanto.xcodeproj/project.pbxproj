@@ -26,6 +26,8 @@
 		1F41F6E72ABB5EF600BA6C7C /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F6E62ABB5EF600BA6C7C /* TopPicksView.swift */; };
 		1F41F6E92ABB61D400BA6C7C /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F6E82ABB61D400BA6C7C /* MatchesView.swift */; };
 		1F6204562ACA53EF00C9F3CD /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */; };
+		1F6F60162ACAF6870019E2ED /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F60152ACAF6870019E2ED /* CardView.swift */; };
+		1F6F60182ACB082B0019E2ED /* FullScreenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F60172ACB082B0019E2ED /* FullScreenCardView.swift */; };
 		1F965DF12AB0A81D00383577 /* AppStageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF02AB0A81D00383577 /* AppStageManager.swift */; };
 		1F965DF32AB0AAB900383577 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F965DF22AB0AAB900383577 /* Extensions.swift */; };
 		1FAF50422AB8C5C9007E68CE /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF50412AB8C5C9007E68CE /* MessageListView.swift */; };
@@ -64,6 +66,8 @@
 		1F41F6E62ABB5EF600BA6C7C /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		1F41F6E82ABB61D400BA6C7C /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
+		1F6F60152ACAF6870019E2ED /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		1F6F60172ACB082B0019E2ED /* FullScreenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCardView.swift; sourceTree = "<group>"; };
 		1F965DF02AB0A81D00383577 /* AppStageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStageManager.swift; sourceTree = "<group>"; };
 		1F965DF22AB0AAB900383577 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1FAF50412AB8C5C9007E68CE /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
@@ -191,7 +195,9 @@
 		1F6204572ACA543700C9F3CD /* CardViews */ = {
 			isa = PBXGroup;
 			children = (
+				1F6F60152ACAF6870019E2ED /* CardView.swift */,
 				1F6204552ACA53EF00C9F3CD /* CardImageScroller.swift */,
+				1F6F60172ACB082B0019E2ED /* FullScreenCardView.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -336,8 +342,10 @@
 				1FD859012AC6217A00849FDA /* Subscription.swift in Sources */,
 				1F3353FE2AB1FDD200DE758C /* ProfileSwipePromo.swift in Sources */,
 				1F3353F42AB1DCB100DE758C /* ProfileView.swift in Sources */,
+				1F6F60182ACB082B0019E2ED /* FullScreenCardView.swift in Sources */,
 				1F3353FC2AB1EDA100DE758C /* ProfileButtonView.swift in Sources */,
 				1FAF7D852AB337EB00AE6990 /* MessageView.swift in Sources */,
+				1F6F60162ACAF6870019E2ED /* CardView.swift in Sources */,
 				1F2F8E772AAF98F700AE2BA2 /* EnkantoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

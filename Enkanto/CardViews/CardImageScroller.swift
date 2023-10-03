@@ -12,6 +12,8 @@ struct CardImageScroller: View {
     
     var person : Person
     
+    @Binding var fullScreenMode : Bool
+    
     @State private var imageIndex : Int = 0
     
     func updateImage(addition:Bool) {
@@ -35,8 +37,8 @@ struct CardImageScroller: View {
                     }
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: geo.size.height, height: geo.size.width)
-                    .clipped()
+                // .frame(width: geo.size.height, height: geo.size.width)
+                //.clipped()
                 
                 HStack {
                     Rectangle()
@@ -51,12 +53,57 @@ struct CardImageScroller: View {
                 }
                 .foregroundColor(Color.white.opacity(0.01))
             }
+            
+            VStack {
+                HStack {
+                    ForEach(0..<person.imageURLS.count) { imageIndex in
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(height: 4)
+                            .foregroundColor(self.imageIndex == imageIndex ? Color.white : Color.gray)
+                    }
+                }
+                .padding(.top, 6)
+                .padding(.horizontal, fullScreenMode ? 0 : 12)
+                
+                Spacer()
+                
+                if !fullScreenMode {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(person.name)
+                                    .font(.system(size: 32, weight: .heavy))
+                                
+                                Text(",\(person.age)")
+                                    .font(.system(size: 28, weight: .light))
+                            }
+                            
+                            Text(person.bio)
+                        }
+                        .padding()
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            fullScreenMode = true
+                        }, label: {
+                            Image(systemName: "info.circle.fill")
+                                .renderingMode(.template)
+                                .font(.system(size: 26, weight: .medium))
+                        })
+                        
+                    }
+                    .foregroundColor(.white)
+                }
+            }
         }
+        .clipShape(.rect(cornerRadius: 12))
+        .shadow(radius: 5)
     }
 }
 
 struct CardImageScroller_Previews: PreviewProvider {
     static var previews: some View {
-        CardImageScroller(person: Person.example)
+        CardImageScroller(person: Person.example, fullScreenMode: .constant(true))
     }
 }
