@@ -18,10 +18,7 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geo in
             if fullScreenMode {
-                VStack {
-                    Text("Full Screen")
-                }
-                .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+                FullScreenCardView(person: person, fullScreenMode: $fullScreenMode)
             } else {
                 CardImageScroller(person: person,fullScreenMode: $fullScreenMode)
                     .frame(width: geo.size.width - 20, height: geo.size.height, alignment: .center)

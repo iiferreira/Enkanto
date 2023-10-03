@@ -97,7 +97,7 @@ struct CardImageScroller: View {
                 }
             }
         }
-        .clipShape(.rect(cornerRadius: 12))
+        .cornerRadius(12)
         .shadow(radius: 5)
     }
 }
