@@ -35,7 +35,7 @@ struct ColorButton : ViewModifier {
         case .back:
             return AnyView(
                 content
-                .foregroundColor(.black))
+                .foregroundColor(.yellow))
         case .heart:
             return AnyView(
                 content

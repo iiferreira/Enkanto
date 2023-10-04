@@ -9,20 +9,27 @@ import SwiftUI
 
 struct CardView: View {
     
+    var viewAnimation : Bool = false
+    
     @State var person : Person
     
     @Binding var fullScreenMode : Bool
 
     let screenCutoff = (UIScreen.main.bounds.width / 2) * 0.8
     
+    @Namespace var imageNamespace
+    
     var body: some View {
         GeometryReader { geo in
             if fullScreenMode {
-                FullScreenCardView(person: person, fullScreenMode: $fullScreenMode)
+                FullScreenCardView(person: person, fullScreenMode: $fullScreenMode, nameSpace: imageNamespace)
+                    .animation(.easeOut(duration: 0.2))
             } else {
                 CardImageScroller(person: person,fullScreenMode: $fullScreenMode)
+                    .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height, alignment: .center)
                     .padding(.leading, 10)
+                    .matchedGeometryEffect(id: "image\(person.id)", in: imageNamespace)
                     .offset(x: person.x, y: person.y)
                     .rotationEffect(.degrees(person.degree))
                     .gesture(

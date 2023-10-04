@@ -16,14 +16,20 @@ struct FullScreenCardView: View {
     @Binding var fullScreenMode : Bool
     
     let screen = UIScreen.main.bounds
+
+    var nameSpace : Namespace.ID
     
     var body: some View {
         ZStack(alignment: .bottom) {
+            
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+            
             ScrollView(showsIndicators: false) {
                 VStack(spacing:0) {
                     CardImageScroller(person: person, fullScreenMode: $fullScreenMode)
                         .frame(width: screen.width, height: screen.height * 0.6)
-                    
+                        .matchedGeometryEffect(id: "image \(person.id)", in: nameSpace)
                     HStack {
                         VStack(alignment:.leading) {
                             HStack {
@@ -43,7 +49,7 @@ struct FullScreenCardView: View {
                         .padding([.horizontal,.top], 16)
                         
                         Button {
-                            
+                            fullScreenMode = false
                         } label: {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))
@@ -136,8 +142,11 @@ struct FullScreenCardView: View {
 }
 
 struct FullScreenCardView_Previews: PreviewProvider {
+    
+    @Namespace static var placeholder
+    
     static var previews: some View {
-        FullScreenCardView(person: Person.example, fullScreenMode: .constant(true))
+        FullScreenCardView(person: Person.example, fullScreenMode: .constant(true), nameSpace: placeholder)
             .environmentObject(UserManager())
     }
 }
